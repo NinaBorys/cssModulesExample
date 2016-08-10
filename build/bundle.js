@@ -44,30 +44,26 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
-	var _robot = __webpack_require__(1);
+	var _app = __webpack_require__(1);
 
-	var _robot2 = _interopRequireDefault(_robot);
+	var _app2 = _interopRequireDefault(_app);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	document.write((0, _robot2.default)("Affirmative", "Dave"));
+	var element = '\n  <div class="' + _app2.default.element + '">\n    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur laudantium recusandae itaque libero velit minus ex reiciendis veniam. Eligendi modi sint delectus beatae nemo provident ratione maiores, voluptatibus a tempore!</p>\n  </div>\n'; //npm start
+	//commad doesn't start the html-page becaue of the node vertion (6.3.1)
+	//[5.0-6.0 needed for webpack script to work]
+
+	document.write(element);
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var greetings = function greetings(text, person) {
-	  return text + ", " + person + ". I read you but I’m sorry, I’m afraid I can’t do that.";
-	};
-
-	exports.default = greetings;
+	// removed by extract-text-webpack-plugin
+	module.exports = {"element":"app__element___1MmQg"};
 
 /***/ }
 /******/ ]);
