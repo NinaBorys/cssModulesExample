@@ -44,15 +44,30 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);  
+	"use strict";
 
+	var _robot = __webpack_require__(1);
+
+	var _robot2 = _interopRequireDefault(_robot);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	document.write((0, _robot2.default)("Affirmative", "Dave"));
 
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
 
-	alert("LOUD NOISES");
+	"use strict";
 
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var greetings = function greetings(text, person) {
+	  return text + ", " + person + ". I read you but I’m sorry, I’m afraid I can’t do that.";
+	};
+
+	exports.default = greetings;
 
 /***/ }
 /******/ ]);
