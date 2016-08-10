@@ -1,15 +1,10 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin');     
+var data = require('./data.js');
+
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
-var locals = {
-  routes: [
-    '/',
-  ]
-};
 
 module.exports = {
-  entry:  {
-    'main': './src/',
-  },
+  entry: './src/router',
   output: {
     path: 'build',
     filename: 'bundle.js',
@@ -30,6 +25,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new StaticSiteGeneratorPlugin('main', locals.routes),
+    new StaticSiteGeneratorPlugin('main', data.routes, data),
   ]
 };

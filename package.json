@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && open index.html"
+    "start": "webpack"
   },
+  "_comment": "start: webpack && open index.html -- doesn't work for node 6.3.1 (5.0-6.0 needed)",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,8 +14,12 @@
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-router": "^2.6.1",
     "static-site-generator-webpack-plugin": "^2.1.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1"
